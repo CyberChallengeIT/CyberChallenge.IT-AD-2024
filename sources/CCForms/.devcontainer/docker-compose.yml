@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    user: node
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+
+  postgres:
+    build: ../db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+

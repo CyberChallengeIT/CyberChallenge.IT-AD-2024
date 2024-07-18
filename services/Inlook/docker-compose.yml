@@ -1,0 +1,18 @@
+services:
+  inlook:
+    build: backend
+    restart: unless-stopped
+    volumes:
+      - ./backend/data:/data
+    ports:
+      - 1337:1337
+    cpus: 2
+    mem_limit: 2048mb
+
+  cleaner:
+    image: python:3.13.0b3-bookworm
+    restart: unless-stopped
+    volumes:
+      - ./backend/data:/data
+      - ./backend/cleaner.py:/cleaner.py
+    command: python3 /cleaner.py

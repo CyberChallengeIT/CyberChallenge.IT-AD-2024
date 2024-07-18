@@ -1,0 +1,16 @@
+{
+	"name": "service3",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "VisualStudioExptTeam.vscodeintellicode"
+      ]
+    }
+  },
+  "remoteUser": "node"
+}

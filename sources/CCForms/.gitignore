@@ -1,0 +1,4 @@
+.env
+api/forms
+api/node_modules
+db/data

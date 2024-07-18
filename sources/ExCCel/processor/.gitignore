@@ -1,0 +1,5 @@
+build/*.o
+build/*.nam
+build/*.til
+build/*.id*
+.gdb_history

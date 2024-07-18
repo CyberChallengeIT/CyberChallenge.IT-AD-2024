@@ -1,0 +1,7 @@
+CREATE USER authuser WITH PASSWORD 'authpass';
+CREATE DATABASE auth;
+ALTER DATABASE auth OWNER TO authuser;
+
+CREATE USER formsuser WITH PASSWORD 'formspass';
+CREATE DATABASE forms;
+ALTER DATABASE forms OWNER TO formsuser;

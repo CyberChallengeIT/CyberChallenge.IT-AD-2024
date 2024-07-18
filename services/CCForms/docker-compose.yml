@@ -1,0 +1,21 @@
+services:
+  frontend:
+    build: ./form
+    ports:
+      - 3000:3000
+  backend:
+    build: ./api
+    volumes:
+      - ./api/forms:/app/forms
+    environment:
+      - JWT_SECRET
+    ports:
+      - 3001:3001
+    depends_on:
+      - postgres
+  postgres:
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+    build: ./db

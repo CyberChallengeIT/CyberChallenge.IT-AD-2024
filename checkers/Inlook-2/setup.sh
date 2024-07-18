@@ -1,0 +1,1 @@
+pip install --break-system-packages pycryptodome==3.16.0 pwntools==4.12.0 requests==2.25.1
